@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/app/dist/style.css">
+    <script src="/app/src/js/script.js" defer></script>
+
+    <script>
+        $(function(){ 
+            $("#header").load("/app/src/views/common/header.html"); 
+            $("#footer").load("/app/src/views/common/footer.html"); 
+        });
+    </script>
+    <title>Home</title>
+</head>
+<body>
+    <div id="header"></div>
+    <main class="principal">
+        <a href="/app/src/views/clients.html"><button type="button" class="button mobile btn" id="cadastrarCliente"><span class="noselect">Cadastro de Clientes</span><div id="circle"></div></button></a>
+        <a href="/app/src/views/products.html"><button type="button" class="button mobile btn" id="cadastrarCliente"><span class="noselect">Cadastro de Produtos</span><div id="circle"></div></button></a>    
+    </main>
+    <div id="footer"></div>
+</body>
+</html>

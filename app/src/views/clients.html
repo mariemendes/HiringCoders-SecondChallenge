@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/app/dist/style.css">
+    <script src="/app/src/js/script.js" defer></script>
+
+    <script>
+        $(function(){ 
+            $("#header").load("/app/src/views/common/header.html"); 
+            $("#footer").load("/app/src/views/common/footer.html"); 
+        });
+    </script>
+
+    <title>Cadastrar Clientes</title>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <table id = "tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id = "form" class="modal-form">
+                    <input id= "nome" data-index="new" type="text" class="modal-field" placeholder="Nome do Cliente" required>
+                    <input id="email" type="email" class="modal-field" placeholder="e-mail do Cliente" required>
+                    <input id="celular" type="text" class="modal-field" placeholder="Celular do Cliente" required>
+                    <input id="cidade"type="text" class="modal-field" placeholder="Cidade do Cliente" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green noselect">Salvar</button>
+                    <button id="cancelar" class="button blue noselect">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+        <div class="register-back">
+            <button type="button" class="button blue mobile interno" id="cadastrarCliente">Cadastrar Cliente</button>
+            <a href="/index.html"><button type="button" class="button-return button blue" style="margin-top: 0px;">Voltar</button></a>
+        </div>
+        
+    </main>
+    <div id="footer"></div>
+</body>
+</html>
